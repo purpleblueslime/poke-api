@@ -1,0 +1,422 @@
+#app {
+  background-color: black;
+  color: white;
+  font: 1rem League Spartan;
+  font-weight: 800;
+  margin: 0;
+}
+
+img {
+  object-fit: cover;
+}
+
+a {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.pokeapp {
+  display: grid;
+  gap: 20px;
+  margin: auto;
+  padding: 0 10px;
+
+  /* if width's more than 1240px (idk it just works ¯\_(ツ)_/¯) */
+  @media (1240px <= width) {
+    width: 1190px;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.navbar .name {
+  align-items: center;
+  display: flex;
+  font: 2rem League Spartan;
+  gap: 20px;
+}
+
+.navbar .dull {
+  font: 1rem League Spartan;
+  color: transparent;
+  transform: scale(1);
+  transition: all 1s;
+}
+
+.navbar:hover .dull {
+  color: #555555;
+  transform: scale(1.2);
+}
+
+.navbar .links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .link {
+  background: linear-gradient(
+    120deg,
+    #ffb1d4 0%,
+    #ffc2eb 25%,
+    #ffe3ca 50%,
+    #edfdb5 75%,
+    #97e0fd 100%
+  );
+  border: solid 3px black;
+  border-radius: 20px;
+  outline: 0;
+  padding: 15px 25px;
+  transform: translateY(0px);
+  transition: all 1s;
+}
+
+.navbar .link:hover {
+  background: linear-gradient(120deg, black);
+  border-color: white;
+  transform: translateY(-10px);
+}
+
+.hero {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#hero {
+  display: flex;
+  font: 7rem League Spartan;
+  gap: 20px;
+
+  @media (500px >= width) {
+    display: grid;
+    font: 4rem League Spartan;
+  }
+
+  @media (1040px >= width > 500px) {
+    font: 5rem League Spartan;
+  }
+}
+
+.hero .tag .feels {
+  background: linear-gradient(120deg, black 0%, black 100%);
+  border-radius: 20px;
+}
+
+.hero .tag {
+  transform: scale(1);
+  transition: all 1s;
+}
+
+.hero:hover .tag {
+  transform: scale(1.02);
+}
+
+.hero:hover .tag .feels,
+.foo .link:not(.dwnl):hover {
+  background: linear-gradient(
+    120deg,
+    #ffb1d4 0%,
+    #ffc2eb 25%,
+    #ffe3ca 50%,
+    #edfdb5 75%,
+    #97e0fd 100%
+  );
+  transform: scale(1.2);
+}
+
+.hero .small {
+  font: 1.5rem League Spartan;
+
+  @media (500px >= width) {
+    font: 1.3rem League Spartan;
+  }
+}
+
+.hero .emo {
+  position: relative;
+  transform: scale(1);
+  transition: all 1s;
+}
+
+.hero:hover .emo {
+  transform: scale(1.2);
+}
+
+.hero .emo img {
+  position: absolute;
+  height: 180px;
+  width: 180px;
+
+  @media (1020px >= width > 500px) {
+    height: 100px;
+    width: 100px;
+  }
+
+  @media (500px >= width) {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+#gho {
+  animation: float 3s ease-in-out infinite;
+
+  @media (500px >= width) {
+    left: 80px;
+  }
+}
+
+#bub {
+  animation: float 4s ease-in-out infinite;
+  left: 90px;
+  bottom: 30px;
+
+  @media (500px >= width) {
+    left: 180px;
+    top: 10px;
+  }
+}
+
+#bal {
+  animation: float 5s ease-in-out infinite;
+  top: 80px;
+  left: 400px;
+
+  @media (500px >= width) {
+    top: auto;
+    left: 250px;
+    bottom: 120px;
+  }
+
+  @media (1040px >= width > 500px) {
+    left: 150px;
+  }
+}
+
+#cam {
+  animation: float 6s ease-in-out infinite;
+  left: 260px;
+  bottom: 10px;
+
+  @media (500px >= width > 369px) {
+    left: 180px;
+    bottom: 150px;
+  }
+
+  @media (369px >= width) {
+    left: 180px;
+    bottom: 110px;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.bento {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bento img {
+  height: 680px;
+  width: 380px;
+  transform: scale(1);
+  transition: all 1s;
+
+  @media (400px >= width) {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.bento img:hover {
+  transform: scale(1.1);
+}
+
+#qna {
+  display: grid;
+  gap: 20px;
+  padding-top: 60px;
+}
+
+#qna .tag {
+  font: 3rem League Spartan;
+
+  @media (500px >= width) {
+    font: 1.5rem League Spartan;
+  }
+}
+
+.qna {
+  font: 1.5rem League Spartan;
+
+  @media (500px >= width) {
+    font: 1rem League Spartan;
+  }
+}
+
+.ans {
+  padding-left: 20px;
+}
+
+.foo {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.foo .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 80px 0 80px 0;
+
+  @media (500px >= width) {
+    gap: 20px;
+  }
+}
+
+.foo .link {
+  border-radius: 10px;
+  font: 1.5rem League Spartan;
+  padding: 4px 8px;
+  transition: all 1s;
+
+  @media (500px >= width) {
+    font: 1rem League Spartan;
+  }
+}
+
+#rainbow {
+  width: 100%;
+}
+
+#rainbow .col {
+  height: 40px;
+  width: 100%;
+}
+
+#bei {
+  background: #ffb1d4;
+}
+
+#gre {
+  background: #ffc2eb;
+}
+
+#cya {
+  background: #ffe3ca;
+}
+
+#pur {
+  background: #edfdb5;
+}
+
+#pin {
+  background: #97e0fd;
+}
+
+.readme {
+  display: grid;
+  gap: 80px;
+
+  @media (500px >= width) {
+    gap: 40px;
+  }
+}
+
+.box {
+  display: grid;
+  gap: 10px;
+}
+
+.veryBig {
+  font: 2.5rem League Spartan;
+
+  @media (500px >= width) {
+    font: 1.8rem League Spartan;
+  }
+}
+
+.big {
+  font: 1.8rem League Spartan;
+
+  @media (500px >= width) {
+    font: 1.4rem League Spartan;
+  }
+}
+
+.small {
+  font: 1.5rem League Spartan;
+  line-height: 1.5;
+  padding-left: 20px;
+
+  @media (500px >= width) {
+    font: 1rem League Spartan;
+  }
+}
+
+.download {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  min-width: 140px;
+  transform: scale(1);
+  transition: all 1s;
+}
+
+.download:hover {
+  transform: scale(1.1);
+}
+
+.download img {
+  height: 40px;
+  width: 40px;
+
+  @media (500px >= width) {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.download .on {
+  display: grid;
+  gap: 2px;
+}
+
+.download .small {
+  font: 1rem League Spartan;
+  padding: 0;
+
+  @media (500px >= width) {
+    font: 0.8rem League Spartan;
+  }
+}
+
+.download .big {
+  font: 1.5rem League Spartan;
+
+  @media (500px >= width) {
+    font: 1.2rem League Spartan;
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "poke_api",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.5",
+    "@supabase/supabase-js": "^2.49.8",
+    "crypto": "^1.0.1",
+    "firebase-admin": "^13.4.0",
+    "mongodb": "^6.7.0",
+    "next": "^14.1.0",
+    "nodemailer": "^7.0.3"
+  },
+  "type": "module",
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}
