@@ -37,5 +37,7 @@ export async function GET(re) {
     return NextResponse.json({ error: 404 }, { status: 404 });
   }
 
-  return NextResponse.redirect(data.signedUrl, 307);
+  return NextResponse.redirect(data.signedUrl, {
+    status: 308,
+  });
 }
